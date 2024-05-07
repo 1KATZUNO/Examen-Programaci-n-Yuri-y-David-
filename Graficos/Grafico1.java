@@ -38,7 +38,8 @@ public class Grafico1{
 
         // Crear los botones
         JButton botonRegistrar = new JButton("Registrar");
-        JButton botonCitas = new JButton("Citas");
+        JButton botonCitas
+         = new JButton("Citas");
         JButton botonConsultar = new JButton("Consultar");
         JButton botonAyuda = new JButton("Ayuda");
 
