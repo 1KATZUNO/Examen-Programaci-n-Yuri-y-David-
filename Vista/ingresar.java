@@ -102,7 +102,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.fecha = fecha;
     }
     
- // Getters y Setters para fecha
+ // Getters y Setters para hora
     public String getHora() {
         return hora;
     }
@@ -127,14 +127,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 		BotonOkIngresar.setFont(new Font("Roboto", Font.BOLD, 13));
 		BotonOkIngresar.setBackground(Color.WHITE);
 		BotonOkIngresar.setForeground(Color.BLACK);
-		
-		Mostrar = new JButton("Mostrar");
-		Mostrar.setBounds(410, 500, 150, 40);
-		add(Mostrar);
-		Mostrar.addActionListener(this);
-		Mostrar.setFont(new Font("Roboto", Font.BOLD, 13));
-		Mostrar.setBackground(Color.WHITE);
-		Mostrar.setForeground(Color.BLACK);
 		
 		NombreField = new JTextField();
 	    CedulaField = new JTextField();
@@ -405,17 +397,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	    			JOptionPane.showMessageDialog(null, "¡Se han ingresado los datos exitosamente! Te contactaremos para confirmar la cita.", "Ingreso exitoso", JOptionPane.INFORMATION_MESSAGE);
 	    			}
 	    		}
-	    	
-	   //ACCIÓN QUE MUESTRA LOS DATOS GUARDADOS
-        if(e.getSource()== Mostrar) {
-		    			
-		    			for (Paciente t: paciente) {
-		    	        	
-		    	        	JOptionPane.showMessageDialog(null, "Nombre:" + t.getNombre() + "\nCédula: " + t.getCedula() + "\nEdad: " + t.getEdad() + "\nContacto: " + t.getContacto() + "\nResidencia: " + t.getResidencia() + "\nFecha conveniente: " + t.getFecha() + "\nHora conveniente: " + t.getHora());
-		    	        	
-		    	        }
-		    		
-		    		}
 	}
 
 
