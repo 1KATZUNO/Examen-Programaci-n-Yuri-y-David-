@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class informacion extends JFrame implements ActionListener{
@@ -29,36 +30,42 @@ private static final long serialVersionUID = 1L;
 		
 		JLabel info6 = new JLabel("");
 		
-		info1.setBounds(180, 10, 1000, 109);
+		info1.setBounds(100, 120, 1000, 109);
         add(info1);
         info1.setFont(new Font("Roboto", Font.BOLD, 15));
         info1.setForeground(Color.BLACK);
         
-        info2.setBounds(180, 50, 600, 109);
+        info2.setBounds(100, 170, 600, 109);
         add(info2);
         info2.setFont(new Font("Roboto", Font.BOLD, 15));
         info2.setForeground(Color.BLACK);
         
-        info3.setBounds(180, 90, 1000, 109);
+        info3.setBounds(100, 220, 1000, 109);
         add(info3);
         info3.setFont(new Font("Roboto", Font.BOLD, 15));
         info3.setForeground(Color.BLACK);
         
-        info4.setBounds(180, 130, 1000, 109);
+        info4.setBounds(100, 270, 1000, 109);
         add(info4);
         info4.setFont(new Font("Roboto", Font.BOLD, 15));
         info4.setForeground(Color.BLACK);
         
-        info5.setBounds(180, 170, 600, 109);
+        info5.setBounds(100, 320, 600, 109);
         add(info5);
         info5.setFont(new Font("Roboto", Font.BOLD, 15));
         info5.setForeground(Color.BLACK);
         
         
-        info6.setBounds(180, 220, 570, 109);
+        info6.setBounds(100, 370, 570, 109);
         add(info6);
         info6.setFont(new Font("Roboto", Font.BOLD, 15));
         info6.setForeground(Color.BLACK);
+
+        JPanel Pane = new JPanel();
+        Pane.setBounds(0,0, 900, 650);
+        Pane.setBackground(new Color (130, 167, 237));
+		Pane.setVisible(true);
+		add(Pane);
 	}
 
 	@Override

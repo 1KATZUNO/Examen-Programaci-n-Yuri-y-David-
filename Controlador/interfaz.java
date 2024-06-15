@@ -18,72 +18,74 @@ import Vista.ingresar;
 
 public class interfaz extends JFrame implements ActionListener {
 
-    private JLabel LabelFondo;
+    private JLabel simbolo;
     private ImageIcon imagenFondo;
     private Icon icono;
     private JLabel Inicio, Subtitulo, Encabezado;
     private JButton BotonIngresar, BotonConsultar, BotonInfo, BotonContacto;
 
     public interfaz() {
+
         //*****************************************Botón Ingresar********************************************************************************
         BotonIngresar = new JButton("INGRESAR");
-        BotonIngresar.setBounds(325, 200, 200, 55);
+        BotonIngresar.setBounds(325, 275, 200, 55);
         add(BotonIngresar);
         BotonIngresar.addActionListener(this);
         BotonIngresar.setFont(new Font("Roboto", Font.BOLD, 18));
-        BotonIngresar.setBackground(Color.WHITE);
+        BotonIngresar.setBackground(new Color(130, 167, 237));
         BotonIngresar.setForeground(Color.BLACK);
         //*****************************************Fin Botón Ingresar****************************************************************************
 
         //*****************************************Botón Actualizar******************************************************************************		
         BotonConsultar = new JButton("CONSULTAR");
-        BotonConsultar.setBounds(325, 300, 200, 55);
+        BotonConsultar.setBounds(325, 355, 200, 55);
         add(BotonConsultar);
         BotonConsultar.addActionListener(this);
         BotonConsultar.setFont(new Font("Roboto", Font.BOLD, 18));
-        BotonConsultar.setBackground(Color.WHITE);
+        BotonConsultar.setBackground(new Color(130, 167, 237));
         BotonConsultar.setForeground(Color.BLACK);
         //*****************************************Fin Botón Actualizar**************************************************************************
 
         //*****************************************Botón Eliminar********************************************************************************
         BotonInfo = new JButton("INFORMACIÓN");
-        BotonInfo.setBounds(325, 400, 200, 55);
+        BotonInfo.setBounds(325, 435, 200, 55);
         add(BotonInfo);
         BotonInfo.addActionListener(this);
         BotonInfo.setFont(new Font("Roboto", Font.BOLD, 18));
-        BotonInfo.setBackground(Color.WHITE);
+        BotonInfo.setBackground(new Color(130, 167, 237));
         BotonInfo.setForeground(Color.BLACK);
         //*****************************************Fin Botón Eliminar*****************************************************************************
+       
         //*****************************************Botón Consultar********************************************************************************
         BotonContacto = new JButton("CONTACTO");
-        BotonContacto.setBounds(325, 500, 200, 55);
+        BotonContacto.setBounds(325, 515, 200, 55);
         add(BotonContacto);
         BotonContacto.addActionListener(this);
         BotonContacto.setFont(new Font("Roboto", Font.BOLD, 18));
-        BotonContacto.setBackground(Color.WHITE);
+        BotonContacto.setBackground(new Color(130, 167, 237));
         BotonContacto.setForeground(Color.BLACK);
         //*****************************************Fin Botón Consultar***************************************************************************
 
         //*****************************************Imagenes y textos*****************************************************************************
         Inicio = new JLabel("Bienvenido/a al sistema de citas");
-        Inicio.setBounds(235, 5, 600, 100);
+        Inicio.setBounds(235, 100, 600, 100);
         Inicio.setFont(new Font("Roboto", Font.BOLD, 25));
         add(Inicio);
 
         Subtitulo = new JLabel("'Este sistema es especialmente para personas con diabetes o en riesgo de sufrirlo'");
-        Subtitulo.setBounds(110, 30, 700, 150);
+        Subtitulo.setBounds(110, 120, 700, 150);
         Subtitulo.setFont(new Font("Roboto", Font.BOLD, 17));
         add(Subtitulo);
 
         Encabezado = new JLabel("Presione la acción que desea realizar:");
-        Encabezado.setBounds(295, 75, 600, 200);
+        Encabezado.setBounds(285, 150, 600, 200);
         Encabezado.setFont(new Font("Roboto", Font.BOLD, 17));
         add(Encabezado);
 
-        LabelFondo = new JLabel(" ");
-        LabelFondo.setBounds(0, 0, 900, 650);
-        this.Paint(this.LabelFondo, "src\\imagenes\\fondo.jpg");
-        add(LabelFondo);
+        simbolo = new JLabel(" ");
+        simbolo.setBounds(10, 10, 100, 100 );
+        this.Paint(this.simbolo, "src\\imagenes\\simbHosp.png");
+        add(simbolo);
         //*****************************************Imagenes y textos****************************************************************************
     }
 

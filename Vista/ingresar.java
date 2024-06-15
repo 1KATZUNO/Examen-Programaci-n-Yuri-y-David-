@@ -121,7 +121,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 		
 //********************************************CONFI BOTONES, JLABELS Y JTEXTFIELDS******************************************************
 		BotonOkIngresar = new JButton("Ingresar");
-		BotonOkIngresar.setBounds(220, 500, 150, 40);
+		BotonOkIngresar.setBounds(330, 500, 150, 40);
 		add(BotonOkIngresar);
 		BotonOkIngresar.addActionListener(this);
 		BotonOkIngresar.setFont(new Font("Roboto", Font.BOLD, 13));
@@ -137,7 +137,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	    HoraField = new JTextField();
 	    
 	    JLabel DatosPaciente = new JLabel("' DATOS PERSONALES '");
-		JLabel NombreLabel = new JLabel("1. Nombre: ");
+		JLabel NombreLabel = new JLabel("1. Nombre completo: ");
 		JLabel CedulaLabel = new JLabel("2. Identificación: ");
 		JLabel EdadLabel = new JLabel ("3. Edad: ");
 		JLabel ContactoLabel = new JLabel("4. Contacto: ");
@@ -158,7 +158,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         DatosPaciente.setFont(new Font("Times New Roman", Font.BOLD, 18));
         DatosPaciente.setForeground(Color.BLACK);
 		
-	    NombreLabel.setBounds(45, 119, 140, 100);
+	    NombreLabel.setBounds(45, 119, 150, 100);
         add(NombreLabel);
         NombreLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
         NombreLabel.setForeground(Color.BLACK);
@@ -316,7 +316,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 		
         JPanel Pane = new JPanel();
         Pane.setBounds(0,0, 900, 650);
-        Pane.setBackground(new Color (255, 214, 248 ));
+        Pane.setBackground(new Color (130, 167, 237));
 		Pane.setVisible(true);
 		add(Pane);
 		
