@@ -63,7 +63,7 @@ public class consultar extends JFrame implements ActionListener {
         // ACCIÓN DEL BOTÓN CONSULTAR
         if (e.getSource() == BotonOkConsultar) {
             boolean IdEncontrado = false;
-            String buscar = ConsultarField.getText();
+            String buscar = ConsultarField.getText().trim();
 
             // Verifica si hay pacientes en el ArrayList
             if (ingresar.paciente.isEmpty()) {
@@ -73,7 +73,7 @@ public class consultar extends JFrame implements ActionListener {
 
             for (Paciente t : ingresar.paciente) {
                 if (t.getCedula() != null && t.getCedula().equals(buscar)) {
-                    JOptionPane.showMessageDialog(null, "Nombre:" + t.getNombre()
+                    JOptionPane.showMessageDialog(null, "Nombre: " + t.getNombre()
                             + "\nCédula: " + t.getCedula()
                             + "\nEdad: " + t.getEdad()
                             + "\nContacto: " + t.getContacto()

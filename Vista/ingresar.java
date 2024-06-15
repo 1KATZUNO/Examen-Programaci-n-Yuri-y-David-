@@ -31,7 +31,7 @@ private static final long serialVersionUID = 1L;
 	public JButton BotonOkIngresar, Mostrar;
 	
 //*******************************************IMPLEMENTACIÓN ARRAYLIST DE LA CLASE PRODUCTOS**********************************************
-	public static ArrayList <Paciente> paciente = new ArrayList <> ();
+public static ArrayList<Paciente> paciente = new ArrayList<>();
 //***************************************************************************************************************************************
 
 protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
