@@ -84,7 +84,7 @@ public class interfaz extends JFrame implements ActionListener {
 
         simbolo = new JLabel(" ");
         simbolo.setBounds(10, 10, 100, 100 );
-        this.Paint(this.simbolo, "src\\imagenes\\simbHosp.png");
+        this.Paint(this.simbolo, "src\\Controlador\\simbHosp.png");
         add(simbolo);
         //*****************************************Imagenes y textos****************************************************************************
     }

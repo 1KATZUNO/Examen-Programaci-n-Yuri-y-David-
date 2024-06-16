@@ -11,7 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Modelo.Paciente;
-import java.util.ArrayList;
 
 public class consultar extends JFrame implements ActionListener {
 
@@ -81,7 +80,7 @@ public class consultar extends JFrame implements ActionListener {
                             + "\nFecha elegida: " + t.getFecha()
                             + "\nHora elegida: " + t.getHora());
                     IdEncontrado = true;
-                    break; // Salir del bucle una vez encontrado
+                    break;
                 }
             }
 
