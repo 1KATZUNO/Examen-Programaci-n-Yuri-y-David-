@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
-
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,7 +16,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-
 import Modelo.Paciente;
 
 public class ingresar extends JFrame implements ActionListener{
@@ -110,12 +108,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
     public void setHora(String hora) {
         this.hora = hora;
     }
-    
-    
-	
-	/**
-	 * 
-	 */
 
 	public ingresar () {
 		
@@ -144,8 +136,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 		JLabel ResidenciaLabel = new JLabel ("5. Residencia: ");
 		JLabel HoraLabel = new JLabel ("6. Hora conveniente de la cita: ");
 		JLabel FechaLabel = new JLabel("7. Fecha conveniente de la cita: ");
-
-		 
 		JLabel InicioIngresar = new JLabel ("- - INGRESE LOS DATOS SOLICITADOS PARA REGISTRARSE - -");
 		
 		InicioIngresar.setBounds(180, 1, 570, 109);
@@ -365,7 +355,33 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	    				
 	    			JOptionPane.showMessageDialog(null, "¡Aún no ha completado todos los datos solicitados!", "Verificación de datos", JOptionPane.WARNING_MESSAGE);	
 	    			}
+
+					nombre = NombreField.getText().trim();
+					cedula = CedulaField.getText().trim();
+					edad = EdadField.getText().trim();
+					contacto = ContactoField.getText().trim();
+					residencia = ResidenciaField.getText().trim();
+					fecha = FechaField.getText().trim();
+					hora = HoraField.getText().trim();
+		
+					Paciente nuevoPaciente = new Paciente(nombre, cedula, edad, contacto, residencia, fecha, hora);
+					paciente.add(nuevoPaciente);
+		
+					JOptionPane.showMessageDialog(null, "Paciente registrado con éxito.");
+					
+					// Limpiar los campos
+					NombreField.setText("");
+					CedulaField.setText("");
+					EdadField.setText("");
+					ContactoField.setText("");
+					ResidenciaField.setText("");
+					FechaField.setText("");
+					HoraField.setText("");
+				}
+			}
+		}
 	    			
+					/* 
 	    			else {
 	    				
 	    				setNombre(NombreField.getText());
@@ -396,8 +412,4 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	   
 	    			JOptionPane.showMessageDialog(null, "¡Se han ingresado los datos exitosamente! Te contactaremos para confirmar la cita.", "Ingreso exitoso", JOptionPane.INFORMATION_MESSAGE);
 	    			}
-	    		}
-	}
-
-
-}
+	    		}*/

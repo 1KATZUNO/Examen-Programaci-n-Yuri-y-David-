@@ -1,15 +1,18 @@
 package Modelo;
 
 public class Paciente {
-	
-    private String nombre, cedula, edad, contacto, residencia, fecha, hora;
+    
+    private String nombre;
+    private String cedula;
+    private String edad;
+    private String contacto;
+    private String residencia;
+    private String fecha;
+    private String hora;
 
-    public Paciente () {
-    }
-	
-    public Paciente (String nombre, String identificacion, String edad, String contacto, String residencia, String fecha, String hora) {
+    public Paciente(String nombre, String cedula, String edad, String contacto, String residencia, String fecha, String hora) {
         this.nombre = nombre;
-        this.cedula = identificacion;
+        this.cedula = cedula;
         this.edad = edad;
         this.contacto = contacto;
         this.residencia = residencia;
@@ -43,33 +46,5 @@ public class Paciente {
 
     public String getHora() {
         return hora;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
-
-    public void setEdad(String edad) {
-        this.edad = edad;
-    }
-
-    public void setContacto(String contacto) {
-        this.contacto = contacto;
-    }
-
-    public void setResidencia(String residencia) {
-        this.residencia = residencia;
-    }
-
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
-
-    public void setHora(String hora) {
-        this.hora = hora;
     }
 }

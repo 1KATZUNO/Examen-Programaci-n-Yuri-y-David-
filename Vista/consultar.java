@@ -40,21 +40,21 @@ public class consultar extends JFrame implements ActionListener {
         add(ConsultarField);
 
         JPanel Pane = new JPanel();
+        Pane.setLayout(null);
         Pane.setBounds(0, 0, 900, 650);
         Pane.setBackground(new Color(130, 167, 237));
         Pane.setVisible(true);
         add(Pane);
 
         setLayout(null);
+        setBounds(0, 0, 900, 650);
+        setVisible(true);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    // CONFIGURACIÓN DEL FONDO
     public static void main(String[] Args) {
-        consultar frame = new consultar();
-        frame.setBounds(0, 0, 900, 650);
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        frame.setBackground(new Color(247, 210, 224));
+        new consultar();
     }
 
     @Override
@@ -72,13 +72,14 @@ public class consultar extends JFrame implements ActionListener {
 
             for (Paciente t : ingresar.paciente) {
                 if (t.getCedula() != null && t.getCedula().equals(buscar)) {
-                    JOptionPane.showMessageDialog(null, "Nombre: " + t.getNombre()
-                            + "\nCédula: " + t.getCedula()
-                            + "\nEdad: " + t.getEdad()
-                            + "\nContacto: " + t.getContacto()
-                            + "\nResidencia: " + t.getResidencia()
-                            + "\nFecha elegida: " + t.getFecha()
-                            + "\nHora elegida: " + t.getHora());
+                    JOptionPane.showMessageDialog(null, 
+                        "Nombre: " + t.getNombre() + "\n" +
+                        "Cédula: " + t.getCedula() + "\n" +
+                        "Edad: " + t.getEdad() + "\n" +
+                        "Contacto: " + t.getContacto() + "\n" +
+                        "Residencia: " + t.getResidencia() + "\n" +
+                        "Fecha elegida: " + t.getFecha() + "\n" +
+                        "Hora elegida: " + t.getHora());
                     IdEncontrado = true;
                     break;
                 }
