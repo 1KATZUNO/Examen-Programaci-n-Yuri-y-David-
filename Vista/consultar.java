@@ -18,6 +18,12 @@ import java.sql.Statement;
 
 public class consultar extends JFrame implements ActionListener {
 
+    // Declare the JDBC objects.
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+    int exito = 0;
+
     private static final long serialVersionUID = 1L;
     private JButton BotonOkConsultar;
     private JTextField ConsultarField;

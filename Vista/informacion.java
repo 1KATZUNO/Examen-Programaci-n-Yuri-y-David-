@@ -14,6 +14,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class informacion extends JFrame implements ActionListener{
+
+    // Declare the JDBC objects.
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+    int exito = 0;
 	
 private static final long serialVersionUID = 1L;
 	

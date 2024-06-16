@@ -21,6 +21,12 @@ import java.sql.Statement;
 
 public class interfaz extends JFrame implements ActionListener {
 
+    // Declare the JDBC objects.
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rs = null;
+    int exito = 0;
+
     private JLabel simbolo;
     private ImageIcon imagenFondo;
     private Icon icono;
