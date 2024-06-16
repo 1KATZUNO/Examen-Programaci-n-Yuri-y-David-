@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Modelo.Paciente;
 
-public class ingresar extends JFrame implements ActionListener{
+public class ingresar extends JFrame implements ActionListener {
 	
 private static final long serialVersionUID = 1L;
 	
