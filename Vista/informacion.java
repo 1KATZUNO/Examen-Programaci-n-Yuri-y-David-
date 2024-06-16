@@ -55,7 +55,6 @@ private static final long serialVersionUID = 1L;
         info5.setFont(new Font("Roboto", Font.BOLD, 15));
         info5.setForeground(Color.BLACK);
         
-        
         info6.setBounds(100, 370, 570, 109);
         add(info6);
         info6.setFont(new Font("Roboto", Font.BOLD, 15));
@@ -70,9 +69,5 @@ private static final long serialVersionUID = 1L;
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
 	}
-	
-
 }

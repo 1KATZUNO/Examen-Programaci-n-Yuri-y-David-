@@ -35,18 +35,15 @@ public static ArrayList<Paciente> paciente = new ArrayList<>();
 protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	
 	public ingresar (String nombre, String edad, String cedula, String residencia, String contacto, String fechaYhora, String hora, String fecha) {
-		
 		this.nombre = nombre;
 		this.edad = edad;
 		this.cedula = cedula;
 		this.residencia = residencia;
 		this.contacto = contacto;
 		this.fecha = fecha;
-		this.hora = hora;
-		
+		this.hora = hora;	
 	}
 	
-	// Getters y Setters para nombre
     public String getNombre() {
         return nombre;
     }
@@ -55,7 +52,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.nombre = nombre;
     }
 
-    // Getters y Setters para edad
     public String getEdad() {
         return edad;
     }
@@ -64,7 +60,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.edad = edad;
     }
 
-    // Getters y Setters para cedula
     public String getCedula() {
         return cedula;
     }
@@ -73,7 +68,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.cedula = cedula;
     }
 
-    // Getters y Setters para residencia
     public String getResidencia() {
         return residencia;
     }
@@ -82,7 +76,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.residencia = residencia;
     }
 
-    // Getters y Setters para contacto
     public String getContacto() {
         return contacto;
     }
@@ -91,7 +84,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.contacto = contacto;
     }
 
-    // Getters y Setters para fecha
     public String getFecha() {
         return fecha;
     }
@@ -100,7 +92,6 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
         this.fecha = fecha;
     }
     
- // Getters y Setters para hora
     public String getHora() {
         return hora;
     }
@@ -345,7 +336,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	    if(e.getSource()== BotonOkIngresar) {
 	    			
 	    	//SE PIDE QUE TODOS LOS CAMPOS ESTÉN LLENOS PARA AGREGAR UN REGISTRO
-			
+
 	    			if (NombreField.getText().isEmpty() || 
 	    				CedulaField.getText().isEmpty() || 
 	    				EdadField.getText().isEmpty() || 

@@ -11,7 +11,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
 import Vista.consultar;
 import Vista.informacion;
 import Vista.ingresar;
@@ -26,7 +25,7 @@ public class interfaz extends JFrame implements ActionListener {
 
     public interfaz() {
 
-        //*****************************************Botón Ingresar********************************************************************************
+    //*****************************************Botón Ingresar********************************************************************************
         BotonIngresar = new JButton("INGRESAR");
         BotonIngresar.setBounds(325, 275, 200, 55);
         add(BotonIngresar);
@@ -34,9 +33,9 @@ public class interfaz extends JFrame implements ActionListener {
         BotonIngresar.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonIngresar.setBackground(new Color(130, 167, 237));
         BotonIngresar.setForeground(Color.BLACK);
-        //*****************************************Fin Botón Ingresar****************************************************************************
+    //*****************************************Fin Botón Ingresar****************************************************************************
 
-        //*****************************************Botón Actualizar******************************************************************************		
+    //*****************************************Botón Actualizar******************************************************************************		
         BotonConsultar = new JButton("CONSULTAR");
         BotonConsultar.setBounds(325, 355, 200, 55);
         add(BotonConsultar);
@@ -44,9 +43,9 @@ public class interfaz extends JFrame implements ActionListener {
         BotonConsultar.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonConsultar.setBackground(new Color(130, 167, 237));
         BotonConsultar.setForeground(Color.BLACK);
-        //*****************************************Fin Botón Actualizar**************************************************************************
+    //*****************************************Fin Botón Actualizar**************************************************************************
 
-        //*****************************************Botón Eliminar********************************************************************************
+    //*****************************************Botón Eliminar********************************************************************************
         BotonInfo = new JButton("INFORMACIÓN");
         BotonInfo.setBounds(325, 435, 200, 55);
         add(BotonInfo);
@@ -54,9 +53,9 @@ public class interfaz extends JFrame implements ActionListener {
         BotonInfo.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonInfo.setBackground(new Color(130, 167, 237));
         BotonInfo.setForeground(Color.BLACK);
-        //*****************************************Fin Botón Eliminar*****************************************************************************
+    //*****************************************Fin Botón Eliminar*****************************************************************************
        
-        //*****************************************Botón Consultar********************************************************************************
+    //*****************************************Botón Consultar********************************************************************************
         BotonContacto = new JButton("CONTACTO");
         BotonContacto.setBounds(325, 515, 200, 55);
         add(BotonContacto);
@@ -64,9 +63,9 @@ public class interfaz extends JFrame implements ActionListener {
         BotonContacto.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonContacto.setBackground(new Color(130, 167, 237));
         BotonContacto.setForeground(Color.BLACK);
-        //*****************************************Fin Botón Consultar***************************************************************************
+    //*****************************************Fin Botón Consultar***************************************************************************
 
-        //*****************************************Imagenes y textos*****************************************************************************
+    //*****************************************Imagenes y textos*****************************************************************************
         Inicio = new JLabel("Bienvenido/a al sistema de citas");
         Inicio.setBounds(235, 100, 600, 100);
         Inicio.setFont(new Font("Roboto", Font.BOLD, 25));
@@ -86,11 +85,12 @@ public class interfaz extends JFrame implements ActionListener {
         simbolo.setBounds(10, 10, 100, 100 );
         this.Paint(this.simbolo, "src\\Controlador\\simbHosp.png");
         add(simbolo);
-        //*****************************************Imagenes y textos****************************************************************************
+    //*****************************************Imagenes y textos****************************************************************************
     }
 
     //*****************************************Fondo****************************************************************************************
     public static void main(String[] args) {
+
         interfaz frame = new interfaz();
         frame.setBounds(0, 0, 900, 650);
         frame.setVisible(true);
@@ -138,11 +138,7 @@ public class interfaz extends JFrame implements ActionListener {
         }
 
         if (e.getSource() == BotonContacto) {
-
             JOptionPane.showMessageDialog(null, "Número: 2688-0078", "Contacto", JOptionPane.INFORMATION_MESSAGE);
-
         }
-
     }
-
 }

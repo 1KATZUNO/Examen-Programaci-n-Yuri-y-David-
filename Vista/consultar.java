@@ -21,6 +21,7 @@ public class consultar extends JFrame implements ActionListener {
     public consultar() {
 
         // CONFIGURACIÓN DE BOTONES, LABELS, ETC
+
         BotonOkConsultar = new JButton("Consultar");
         BotonOkConsultar.setBounds(355, 220, 150, 40);
         add(BotonOkConsultar);
@@ -49,6 +50,7 @@ public class consultar extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         // ACCIÓN DEL BOTÓN CONSULTAR
         if (e.getSource() == BotonOkConsultar) {
             boolean IdEncontrado = false;
@@ -61,6 +63,7 @@ public class consultar extends JFrame implements ActionListener {
             }
 
             for (Paciente t : ingresar.paciente) {
+
                 if (t.getCedula() != null && t.getCedula().equals(buscar)) {
                     JOptionPane.showMessageDialog(null, 
                         "Nombre: " + t.getNombre() + "\n" +

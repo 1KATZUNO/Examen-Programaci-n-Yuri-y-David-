@@ -1,14 +1,8 @@
 package Modelo;
 
 public class Paciente {
-    
-    private String nombre;
-    private String cedula;
-    private String edad;
-    private String contacto;
-    private String residencia;
-    private String fecha;
-    private String hora;
+
+    String nombre, cedula, edad, contacto, residencia, fecha, hora;
 
     public Paciente(String nombre, String cedula, String edad, String contacto, String residencia, String fecha, String hora) {
         this.nombre = nombre;
