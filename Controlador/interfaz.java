@@ -35,7 +35,7 @@ public class interfaz extends JFrame implements ActionListener {
 
         // Botón Ingresar
         BotonIngresar = new JButton("INGRESAR");
-        BotonIngresar.setBounds(325, 275, 200, 55);
+        BotonIngresar.setBounds(325, 180, 200, 55);
         add(BotonIngresar);
         BotonIngresar.addActionListener(this);
         BotonIngresar.setFont(new Font("Roboto", Font.BOLD, 18));
@@ -44,7 +44,7 @@ public class interfaz extends JFrame implements ActionListener {
 
         // Botón Consultar
         BotonConsultar = new JButton("CONSULTAR");
-        BotonConsultar.setBounds(325, 355, 200, 55);
+        BotonConsultar.setBounds(325, 260, 200, 55);
         add(BotonConsultar);
         BotonConsultar.addActionListener(this);
         BotonConsultar.setFont(new Font("Roboto", Font.BOLD, 18));
@@ -53,7 +53,7 @@ public class interfaz extends JFrame implements ActionListener {
 
         // Botón Información
         BotonInfo = new JButton("INFORMACIÓN");
-        BotonInfo.setBounds(325, 435, 200, 55);
+        BotonInfo.setBounds(325, 340, 200, 55);
         add(BotonInfo);
         BotonInfo.addActionListener(this);
         BotonInfo.setFont(new Font("Roboto", Font.BOLD, 18));
@@ -62,7 +62,7 @@ public class interfaz extends JFrame implements ActionListener {
 
         // Botón Contacto
         BotonContacto = new JButton("CONTACTO");
-        BotonContacto.setBounds(325, 515, 200, 55);
+        BotonContacto.setBounds(325, 420, 200, 55);
         add(BotonContacto);
         BotonContacto.addActionListener(this);
         BotonContacto.setFont(new Font("Roboto", Font.BOLD, 18));
@@ -71,7 +71,7 @@ public class interfaz extends JFrame implements ActionListener {
 
         // Botón Mantenimiento
         BotonMantenimiento = new JButton("MANTENIMIENTO");
-        BotonMantenimiento.setBounds(325, 595, 200, 55);
+        BotonMantenimiento.setBounds(325, 500, 200, 55);
         add(BotonMantenimiento);
         BotonMantenimiento.addActionListener(this);
         BotonMantenimiento.setFont(new Font("Roboto", Font.BOLD, 18));
@@ -80,17 +80,17 @@ public class interfaz extends JFrame implements ActionListener {
 
         // Textos e imágenes
         Inicio = new JLabel("Bienvenido/a al sistema de citas");
-        Inicio.setBounds(235, 100, 600, 100);
+        Inicio.setBounds(235, 5, 600, 100);
         Inicio.setFont(new Font("Roboto", Font.BOLD, 25));
         add(Inicio);
 
         Subtitulo = new JLabel("'Este sistema es especialmente para personas con diabetes o en riesgo de sufrirlo'");
-        Subtitulo.setBounds(110, 120, 700, 150);
+        Subtitulo.setBounds(110, 25, 700, 150);
         Subtitulo.setFont(new Font("Roboto", Font.BOLD, 17));
         add(Subtitulo);
 
         Encabezado = new JLabel("Presione la acción que desea realizar:");
-        Encabezado.setBounds(285, 150, 600, 200);
+        Encabezado.setBounds(285, 55, 600, 200);
         Encabezado.setFont(new Font("Roboto", Font.BOLD, 17));
         add(Encabezado);
 
