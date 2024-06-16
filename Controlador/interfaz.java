@@ -14,6 +14,10 @@ import javax.swing.JOptionPane;
 import Vista.consultar;
 import Vista.informacion;
 import Vista.ingresar;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 public class interfaz extends JFrame implements ActionListener {
 

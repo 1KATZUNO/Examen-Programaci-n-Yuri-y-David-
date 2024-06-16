@@ -1,5 +1,10 @@
 package Modelo;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 public class Paciente {
 
     String nombre, cedula, edad, contacto, residencia, fecha, hora;
