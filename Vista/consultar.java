@@ -45,16 +45,6 @@ public class consultar extends JFrame implements ActionListener {
         Pane.setBackground(new Color(130, 167, 237));
         Pane.setVisible(true);
         add(Pane);
-
-        setLayout(null);
-        setBounds(0, 0, 900, 650);
-        setVisible(true);
-        setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-
-    public static void main(String[] Args) {
-        new consultar();
     }
 
     @Override

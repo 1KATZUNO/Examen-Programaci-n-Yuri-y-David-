@@ -345,6 +345,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	    if(e.getSource()== BotonOkIngresar) {
 	    			
 	    	//SE PIDE QUE TODOS LOS CAMPOS ESTÉN LLENOS PARA AGREGAR UN REGISTRO
+			
 	    			if (NombreField.getText().isEmpty() || 
 	    				CedulaField.getText().isEmpty() || 
 	    				EdadField.getText().isEmpty() || 
@@ -367,7 +368,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 					Paciente nuevoPaciente = new Paciente(nombre, cedula, edad, contacto, residencia, fecha, hora);
 					paciente.add(nuevoPaciente);
 		
-					JOptionPane.showMessageDialog(null, "Paciente registrado con éxito.");
+					JOptionPane.showMessageDialog(null, "Paciente registrado con éxito. Te contactaremos para confirmar la cita.");
 					
 					// Limpiar los campos
 					NombreField.setText("");
@@ -380,36 +381,3 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 				}
 			}
 		}
-	    			
-					/* 
-	    			else {
-	    				
-	    				setNombre(NombreField.getText());
-	    				setCedula(CedulaField.getText());
-	    				setEdad(EdadField.getText());
-	    				setContacto(ContactoField.getText());
-	    				setResidencia(ResidenciaField.getText());
-	    				setFecha(FechaField.getText());; 
-	    				
-	    				String nombre = NombreField.getText();
-	 	    	        String cedula = CedulaField.getText();
-	 	    	        String edad = EdadField.getText();
-	 	    	        String contacto = ContactoField.getText();
-	 	    	        String residencia = ResidenciaField.getText();
-	 	    	        String fecha = FechaField.getText();
-	 	    	        String hora = HoraField.getText();
-	 	    	        
-	 	    	        //SE GUARDAN DATOS EN EL ARRAYLIST
-	 	    	        ingresar.paciente.add(new Paciente());
-	 	    	        
-	 	    	        NombreField.setText("");
-	 	    	        CedulaField.setText("");
-	 	    	        EdadField.setText("");
-	 	    	        ContactoField.setText("");
-	 	    	        ResidenciaField.setText("");
-	 	    	        FechaField.setText("");
-	 	    	        HoraField.setText("");
-	   
-	    			JOptionPane.showMessageDialog(null, "¡Se han ingresado los datos exitosamente! Te contactaremos para confirmar la cita.", "Ingreso exitoso", JOptionPane.INFORMATION_MESSAGE);
-	    			}
-	    		}*/
