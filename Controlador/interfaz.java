@@ -14,28 +14,26 @@ import javax.swing.JOptionPane;
 import Vista.consultar;
 import Vista.informacion;
 import Vista.ingresar;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import Vista.MantenimientoPaciente;
 
 public class interfaz extends JFrame implements ActionListener {
-
-    // Declare the JDBC objects.
-    Connection con = null;
-    Statement stmt = null;
-    ResultSet rs = null;
-    int exito = 0;
 
     private JLabel simbolo;
     private ImageIcon imagenFondo;
     private Icon icono;
     private JLabel Inicio, Subtitulo, Encabezado;
-    private JButton BotonIngresar, BotonConsultar, BotonInfo, BotonContacto;
+    private JButton BotonIngresar, BotonConsultar, BotonInfo, BotonContacto, BotonMantenimiento;
 
     public interfaz() {
+        // Configuración de la ventana
+        setLayout(null);
+        setTitle("Interfaz Principal");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(0, 0, 900, 650);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(Color.WHITE);
 
-    //*****************************************Botón Ingresar********************************************************************************
+        // Botón Ingresar
         BotonIngresar = new JButton("INGRESAR");
         BotonIngresar.setBounds(325, 275, 200, 55);
         add(BotonIngresar);
@@ -43,9 +41,8 @@ public class interfaz extends JFrame implements ActionListener {
         BotonIngresar.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonIngresar.setBackground(new Color(130, 167, 237));
         BotonIngresar.setForeground(Color.BLACK);
-    //*****************************************Fin Botón Ingresar****************************************************************************
 
-    //*****************************************Botón Actualizar******************************************************************************		
+        // Botón Consultar
         BotonConsultar = new JButton("CONSULTAR");
         BotonConsultar.setBounds(325, 355, 200, 55);
         add(BotonConsultar);
@@ -53,9 +50,8 @@ public class interfaz extends JFrame implements ActionListener {
         BotonConsultar.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonConsultar.setBackground(new Color(130, 167, 237));
         BotonConsultar.setForeground(Color.BLACK);
-    //*****************************************Fin Botón Actualizar**************************************************************************
 
-    //*****************************************Botón Eliminar********************************************************************************
+        // Botón Información
         BotonInfo = new JButton("INFORMACIÓN");
         BotonInfo.setBounds(325, 435, 200, 55);
         add(BotonInfo);
@@ -63,9 +59,8 @@ public class interfaz extends JFrame implements ActionListener {
         BotonInfo.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonInfo.setBackground(new Color(130, 167, 237));
         BotonInfo.setForeground(Color.BLACK);
-    //*****************************************Fin Botón Eliminar*****************************************************************************
-       
-    //*****************************************Botón Consultar********************************************************************************
+
+        // Botón Contacto
         BotonContacto = new JButton("CONTACTO");
         BotonContacto.setBounds(325, 515, 200, 55);
         add(BotonContacto);
@@ -73,9 +68,17 @@ public class interfaz extends JFrame implements ActionListener {
         BotonContacto.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonContacto.setBackground(new Color(130, 167, 237));
         BotonContacto.setForeground(Color.BLACK);
-    //*****************************************Fin Botón Consultar***************************************************************************
 
-    //*****************************************Imagenes y textos*****************************************************************************
+        // Botón Mantenimiento
+        BotonMantenimiento = new JButton("MANTENIMIENTO");
+        BotonMantenimiento.setBounds(325, 595, 200, 55);
+        add(BotonMantenimiento);
+        BotonMantenimiento.addActionListener(this);
+        BotonMantenimiento.setFont(new Font("Roboto", Font.BOLD, 18));
+        BotonMantenimiento.setBackground(new Color(130, 167, 237));
+        BotonMantenimiento.setForeground(Color.BLACK);
+
+        // Textos e imágenes
         Inicio = new JLabel("Bienvenido/a al sistema de citas");
         Inicio.setBounds(235, 100, 600, 100);
         Inicio.setFont(new Font("Roboto", Font.BOLD, 25));
@@ -92,37 +95,30 @@ public class interfaz extends JFrame implements ActionListener {
         add(Encabezado);
 
         simbolo = new JLabel(" ");
-        simbolo.setBounds(10, 10, 100, 100 );
-        this.Paint(this.simbolo, "src\\Controlador\\simbHosp.png");
+        simbolo.setBounds(10, 10, 100, 100);
+        Paint(simbolo, "src\\Controlador\\simbHosp.png");
         add(simbolo);
-    //*****************************************Imagenes y textos****************************************************************************
     }
 
-    //*****************************************Fondo****************************************************************************************
     public static void main(String[] args) {
-
         interfaz frame = new interfaz();
-        frame.setBounds(0, 0, 900, 650);
         frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        frame.getContentPane().setBackground(Color.WHITE);
     }
 
     private void Paint(JLabel lbl, String direccion) {
         this.imagenFondo = new ImageIcon(direccion);
         this.icono = new ImageIcon(
-                this.imagenFondo.getImage().getScaledInstance(
-                        lbl.getWidth(),
-                        lbl.getHeight(),
-                        Image.SCALE_DEFAULT)
+            this.imagenFondo.getImage().getScaledInstance(
+                lbl.getWidth(),
+                lbl.getHeight(),
+                Image.SCALE_DEFAULT)
         );
         lbl.setIcon(this.icono);
         this.repaint();
     }
-    //*****************************************Fondo****************************************************************************************
 
+    @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource() == BotonIngresar) {
             ingresar frame = new ingresar();
             frame.setBounds(0, 0, 900, 650);
@@ -149,6 +145,11 @@ public class interfaz extends JFrame implements ActionListener {
 
         if (e.getSource() == BotonContacto) {
             JOptionPane.showMessageDialog(null, "Número: 2688-0078", "Contacto", JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        if (e.getSource() == BotonMantenimiento) {
+            MantenimientoPaciente frame = new MantenimientoPaciente();
+            frame.setVisible(true);
         }
     }
 }

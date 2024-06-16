@@ -17,31 +17,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Modelo.Paciente;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class ingresar extends JFrame implements ActionListener {
-
-	// Declare the JDBC objects.
-	Connection con = null;
-	Statement stmt = null;
-	ResultSet rs = null;
-	int exito = 0;
 	
-private static final long serialVersionUID = 1L;
-	
+    private static final long serialVersionUID = 1L;
 	public JTextField NombreField, EdadField, ContactoField, ResidenciaField, FechaField, HoraField, CedulaField;
 	public JLabel Label1, LabelFondo;
 	public ImageIcon imagenFondo;
 	public Icon icono;
 	public JButton BotonOkIngresar, Mostrar;
-	
-//*******************************************IMPLEMENTACIÓN ARRAYLIST DE LA CLASE PRODUCTOS**********************************************
-public static ArrayList<Paciente> paciente = new ArrayList<>();
-//***************************************************************************************************************************************
 
+	/*
 protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 	
 	public ingresar (String nombre, String edad, String cedula, String residencia, String contacto, String fechaYhora, String hora, String fecha) {
@@ -108,7 +94,7 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 
     public void setHora(String hora) {
         this.hora = hora;
-    }
+    } */
 
 	public ingresar () {
 		
@@ -345,40 +331,22 @@ protected String nombre, edad, cedula, residencia, contacto, fecha, hora;
 //************************ACCIÓN PARA LOS BOTONES****************************************************************************************
 	    if(e.getSource()== BotonOkIngresar) {
 	    			
-	    	//SE PIDE QUE TODOS LOS CAMPOS ESTÉN LLENOS PARA AGREGAR UN REGISTRO
+			String nombre = NombreField.getText();
+            String cedula = CedulaField.getText();
+            String edad = EdadField.getText();
+            String contacto = ContactoField.getText();
+            String residencia = ResidenciaField.getText();
+            String fecha = FechaField.getText();
+            String hora = HoraField.getText();
 
-	    			if (NombreField.getText().isEmpty() || 
-	    				CedulaField.getText().isEmpty() || 
-	    				EdadField.getText().isEmpty() || 
-	    				ContactoField.getText().isEmpty() || 
-	    				ResidenciaField.getText().isEmpty() || 
-	    				FechaField.getText().isEmpty() ||
-	    				HoraField.getText().isEmpty()){
-	    				
-	    			JOptionPane.showMessageDialog(null, "¡Aún no ha completado todos los datos solicitados!", "Verificación de datos", JOptionPane.WARNING_MESSAGE);	
-	    			}
+            Paciente paciente = new Paciente(nombre, cedula, edad, contacto, residencia, fecha, hora);
+            if (Paciente.insertarPaciente(paciente)) {
+                JOptionPane.showMessageDialog(this, "Paciente ingresado exitosamente.");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al ingresar el paciente.");
+            }
 
-					nombre = NombreField.getText().trim();
-					cedula = CedulaField.getText().trim();
-					edad = EdadField.getText().trim();
-					contacto = ContactoField.getText().trim();
-					residencia = ResidenciaField.getText().trim();
-					fecha = FechaField.getText().trim();
-					hora = HoraField.getText().trim();
-		
-					Paciente nuevoPaciente = new Paciente(nombre, cedula, edad, contacto, residencia, fecha, hora);
-					paciente.add(nuevoPaciente);
-		
-					JOptionPane.showMessageDialog(null, "Paciente registrado con éxito. Te contactaremos para confirmar la cita.");
-					
-					// Limpiar los campos
-					NombreField.setText("");
-					CedulaField.setText("");
-					EdadField.setText("");
-					ContactoField.setText("");
-					ResidenciaField.setText("");
-					FechaField.setText("");
-					HoraField.setText("");
+
 				}
 			}
 		}

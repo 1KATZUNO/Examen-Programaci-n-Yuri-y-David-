@@ -11,18 +11,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Modelo.Paciente;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class consultar extends JFrame implements ActionListener {
-
-    // Declare the JDBC objects.
-    Connection con = null;
-    Statement stmt = null;
-    ResultSet rs = null;
-    int exito = 0;
 
     private static final long serialVersionUID = 1L;
     private JButton BotonOkConsultar;
@@ -31,7 +21,6 @@ public class consultar extends JFrame implements ActionListener {
     public consultar() {
 
         // CONFIGURACIÓN DE BOTONES, LABELS, ETC
-
         BotonOkConsultar = new JButton("Consultar");
         BotonOkConsultar.setBounds(355, 220, 150, 40);
         add(BotonOkConsultar);
@@ -60,36 +49,15 @@ public class consultar extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        // ACCIÓN DEL BOTÓN CONSULTAR
         if (e.getSource() == BotonOkConsultar) {
-            boolean IdEncontrado = false;
-            String buscar = ConsultarField.getText().trim();
-
-            // Verifica si hay pacientes en el ArrayList
-            if (ingresar.paciente.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "No hay registros de pacientes.");
-                return;
-            }
-
-            for (Paciente t : ingresar.paciente) {
-
-                if (t.getCedula() != null && t.getCedula().equals(buscar)) {
-                    JOptionPane.showMessageDialog(null, 
-                        "Nombre: " + t.getNombre() + "\n" +
-                        "Cédula: " + t.getCedula() + "\n" +
-                        "Edad: " + t.getEdad() + "\n" +
-                        "Contacto: " + t.getContacto() + "\n" +
-                        "Residencia: " + t.getResidencia() + "\n" +
-                        "Fecha elegida: " + t.getFecha() + "\n" +
-                        "Hora elegida: " + t.getHora());
-                    IdEncontrado = true;
-                    break;
-                }
-            }
-
-            if (!IdEncontrado) {
-                JOptionPane.showMessageDialog(null, "No se encontró un registro con la identificación proporcionada.");
+            String cedula = ConsultarField.getText();
+            Paciente paciente = Paciente.consultarPaciente(cedula);
+            if (paciente != null) {
+                String message = String.format("Nombre: %s\nCédula: %s\nEdad: %s\nContacto: %s\nResidencia: %s\nFecha: %s\nHora: %s",
+                        paciente.getNombre(), paciente.getCedula(), paciente.getEdad(), paciente.getContacto(), paciente.getResidencia(), paciente.getFecha(), paciente.getHora());
+                JOptionPane.showMessageDialog(this, message);
+            } else {
+                JOptionPane.showMessageDialog(this, "No se encontró un registro con la identificación proporcionada.");
             }
         }
     }
