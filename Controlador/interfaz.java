@@ -25,6 +25,7 @@ public class interfaz extends JFrame implements ActionListener {
     private JButton BotonIngresar, BotonConsultar, BotonInfo, BotonContacto, BotonMantenimiento;
 
     public interfaz() {
+        
         // Configuración de la ventana
         setLayout(null);
         setTitle("Interfaz Principal");
