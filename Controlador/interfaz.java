@@ -46,7 +46,7 @@ public class interfaz extends JFrame implements ActionListener {
         BotonConsultar = new JButton("CONSULTAR");
         BotonConsultar.setBounds(325, 260, 200, 55);
         add(BotonConsultar);
-        BotonConsultar.addActionListener(this);
+        BotonConsultar.addActionListener(this); 
         BotonConsultar.setFont(new Font("Roboto", Font.BOLD, 18));
         BotonConsultar.setBackground(new Color(130, 167, 237));
         BotonConsultar.setForeground(Color.BLACK);
