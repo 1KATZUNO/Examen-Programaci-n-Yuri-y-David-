@@ -1,24 +1,29 @@
 package Vista;
 
 import Modelo.Paciente;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class MantenimientoPaciente extends JFrame implements ActionListener {
 
-    private static final long serialVersionUID = 1L;
     private JTextField nombreField, cedulaField, edadField, contactoField, residenciaField, fechaField, horaField;
     private JButton insertarButton, actualizarButton, eliminarButton, consultarButton;
 
     public MantenimientoPaciente() {
+        configurarVentana();
+        inicializarComponentes();
+    }
+
+    private void configurarVentana() {
         setTitle("Mantenimiento de Pacientes");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(null);
+        setLocationRelativeTo(null);
+    }
 
-        // Labels y TextFields
+    private void inicializarComponentes() {
         JLabel nombreLabel = new JLabel("Nombre:");
         nombreLabel.setBounds(50, 50, 150, 30);
         add(nombreLabel);
@@ -75,7 +80,6 @@ public class MantenimientoPaciente extends JFrame implements ActionListener {
         horaField.setBounds(200, 350, 200, 30);
         add(horaField);
 
-        // Botones
         insertarButton = new JButton("Insertar");
         insertarButton.setBounds(450, 50, 150, 40);
         add(insertarButton);
