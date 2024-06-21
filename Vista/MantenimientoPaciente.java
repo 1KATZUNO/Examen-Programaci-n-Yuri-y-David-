@@ -103,7 +103,9 @@ public class MantenimientoPaciente extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if (e.getSource() == insertarButton) {
+            
             String nombre = nombreField.getText();
             String cedula = cedulaField.getText();
             String edad = edadField.getText();

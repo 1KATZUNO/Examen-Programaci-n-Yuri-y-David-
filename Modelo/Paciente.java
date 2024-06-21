@@ -48,7 +48,7 @@ public class Paciente {
         return hora;
     }
     public static boolean insertarPaciente(Paciente paciente) {
-        try (Connection con = DataBaseConnection.getConnection()) {
+        try (Connection con = Conexion.getConnection()) {
             String query = "INSERT INTO pacientes (nombre, cedula, edad, contacto, residencia, fecha, hora) VALUES (?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, paciente.getNombre());
@@ -67,7 +67,7 @@ public class Paciente {
     }
 
     public static Paciente consultarPaciente(String cedula) {
-        try (Connection con = DataBaseConnection.getConnection()) {
+        try (Connection con = Conexion.getConnection()) {
             String query = "SELECT * FROM pacientes WHERE cedula = ?";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, cedula);
@@ -90,7 +90,7 @@ public class Paciente {
     }
 
     public static boolean actualizarPaciente(Paciente paciente) {
-        try (Connection con = DataBaseConnection.getConnection()) {
+        try (Connection con = Conexion.getConnection()) {
             String query = "UPDATE pacientes SET nombre = ?, edad = ?, contacto = ?, residencia = ?, fecha = ?, hora = ? WHERE cedula = ?";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, paciente.getNombre());
@@ -109,7 +109,7 @@ public class Paciente {
     }
 
     public static boolean eliminarPaciente(String cedula) {
-        try (Connection con = DataBaseConnection.getConnection()) {
+        try (Connection con = Conexion.getConnection()) {
             String query = "DELETE FROM pacientes WHERE cedula = ?";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1, cedula);

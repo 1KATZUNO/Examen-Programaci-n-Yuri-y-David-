@@ -1,41 +1,62 @@
 package Vista;
 
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 
 public class Menu extends JFrame implements ActionListener {
 
     private JButton botonMantenimiento, botonDerechos, botonSalir;
 
     public Menu() {
-        configurarVentana();
-        inicializarComponentes();
-    }
-
-    private void configurarVentana() {
-        setTitle("Menú Principal");
+       
+        setTitle("MENÚ");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
-    }
 
-    private void inicializarComponentes() {
-        botonMantenimiento = new JButton("Mantenimiento");
-        botonMantenimiento.setBounds(50, 50, 300, 30);
+        JLabel Inicio = new JLabel("Presione la Acción que Desea Realizar");
+        Inicio.setBounds(200, 100, 600, 50);
+        Inicio.setForeground(Color.WHITE);
+        Inicio.setFont(new Font("cooper black", Font.ROMAN_BASELINE, 26));
+        add(Inicio);
+
+        botonMantenimiento = new JButton("MANTENIMIENTO");
+        botonMantenimiento.setBounds(300, 200, 300, 55);
+        botonMantenimiento.setFont(new Font("Roboto", Font.BOLD, 15));
+        botonMantenimiento.setForeground(new java.awt.Color(102, 102, 102));
+        botonMantenimiento.setBackground(Color.WHITE);
+        botonMantenimiento.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(botonMantenimiento);
         botonMantenimiento.addActionListener(this);
 
-        botonDerechos = new JButton("Derechos de Autor");
-        botonDerechos.setBounds(50, 100, 300, 30);
+        botonDerechos = new JButton("DERECHOS DE AUTOR");
+        botonDerechos.setBounds(300, 300, 300, 55);
+        botonDerechos.setFont(new Font("Roboto", Font.BOLD, 15));
+        botonDerechos.setForeground(new java.awt.Color(102, 102, 102));
+        botonDerechos.setBackground(Color.WHITE);
+        botonDerechos.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(botonDerechos);
         botonDerechos.addActionListener(this);
 
-        botonSalir = new JButton("Salir");
-        botonSalir.setBounds(50, 150, 300, 30);
+        botonSalir = new JButton("SALIR");
+        botonSalir.setBounds(300, 400, 300, 55);
+        botonSalir.setFont(new Font("Roboto", Font.BOLD, 15));
+        botonSalir.setForeground(new java.awt.Color(102, 102, 102));
+        botonSalir.setBackground(Color.WHITE);
+        botonSalir.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(botonSalir);
         botonSalir.addActionListener(this);
+
+        JPanel fondo = new JPanel();
+        fondo.setBackground(new java.awt.Color(42, 94, 166));
+        fondo.setSize(900, 650);
+        fondo.setLocation(0, 0);
+        fondo.setVisible(true);
+        add(fondo);
     }
 
     @Override

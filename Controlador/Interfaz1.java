@@ -53,7 +53,7 @@ public class Interfaz1 extends JFrame implements ActionListener {
         add(claveField);
         
         botonIngresar = new JButton("Ingresar al menú");
-        botonIngresar.setBounds(405, 385, 130, 30);
+        botonIngresar.setBounds(370, 385, 130, 30);
         botonIngresar.setFont(new Font("Roboto", Font.BOLD, 12));
         botonIngresar.setForeground(new java.awt.Color(102, 102, 102));
         botonIngresar.setBackground(Color.WHITE);
@@ -73,11 +73,14 @@ public class Interfaz1 extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == botonIngresar) {
+
             Menu frame = new Menu();
+
             frame.setBounds(0, 0, 900, 650);
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
             frame.getContentPane().setBackground(Color.WHITE);
+
         }
     }
 }
