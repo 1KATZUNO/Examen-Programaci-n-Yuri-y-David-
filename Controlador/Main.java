@@ -6,7 +6,7 @@ public class Main {
     
     public static void main(String[] args) {
       
-        Interfaz GUI = new Interfaz();
+        Interfaz1 GUI = new Interfaz1();
        
         //Configuración de la ventana principal
         GUI.setTitle("LOGIN");

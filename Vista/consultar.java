@@ -53,7 +53,7 @@ public class Consultar extends JFrame implements ActionListener {
             Paciente paciente = Paciente.consultarPaciente(cedula);
             if (paciente != null) {
                 String message = String.format("Nombre: %s\nCédula: %s\nEdad: %s\nContacto: %s\nResidencia: %s\nFecha: %s\nHora: %s",
-                        paciente.getNombre(), paciente.getCedula(), paciente.getEdad(), paciente.getContacto(), paciente.getResidencia(), paciente.getFecha(), paciente.getHora());
+                        paciente.getNombre(), paciente.getCedula(), paciente.getEdad(), paciente.getContacto(), paciente.getResidencia());
                 JOptionPane.showMessageDialog(this, message);
             } else {
                 JOptionPane.showMessageDialog(this, "No se encontró un registro con la identificación proporcionada.");

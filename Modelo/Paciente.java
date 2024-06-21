@@ -7,16 +7,15 @@ import java.sql.SQLException;
 
 public class Paciente {
 
-    private String nombre, cedula, edad, contacto, residencia, fecha, hora;
+    private String nombre, cedula, edad, contacto, residencia;
 
-    public Paciente(String nombre, String cedula, String edad, String contacto, String residencia, String fecha, String hora) {
+    public Paciente(String nombre, String cedula, String edad, String contacto, String residencia) {
         this.nombre = nombre;
         this.cedula = cedula;
         this.edad = edad;
         this.contacto = contacto;
         this.residencia = residencia;
-        this.fecha = fecha;
-        this.hora = hora;
+       
     }
 
     public String getNombre() {
@@ -39,13 +38,6 @@ public class Paciente {
         return residencia;
     }
     
-    public String getFecha() {
-        return fecha;
-    }
-    
-    public String getHora() {
-        return hora;
-    }
     public static boolean insertarPaciente(Paciente paciente) {
         try (Connection con = Conexion.getConnection()) {
             String query = "INSERT INTO pacientes (nombre, cedula, edad, contacto, residencia, fecha, hora) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -55,8 +47,6 @@ public class Paciente {
             ps.setString(3, paciente.getEdad());
             ps.setString(4, paciente.getContacto());
             ps.setString(5, paciente.getResidencia());
-            ps.setString(6, paciente.getFecha());
-            ps.setString(7, paciente.getHora());
             ps.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -77,9 +67,7 @@ public class Paciente {
                     rs.getString("cedula"),
                     rs.getString("edad"),
                     rs.getString("contacto"),
-                    rs.getString("residencia"),
-                    rs.getString("fecha"),
-                    rs.getString("hora")
+                    rs.getString("residencia")
                 );
             }
         } catch (SQLException e) {
@@ -96,8 +84,6 @@ public class Paciente {
             ps.setString(2, paciente.getEdad());
             ps.setString(3, paciente.getContacto());
             ps.setString(4, paciente.getResidencia());
-            ps.setString(5, paciente.getFecha());
-            ps.setString(6, paciente.getHora());
             ps.setString(7, paciente.getCedula());
             ps.executeUpdate();
             return true;

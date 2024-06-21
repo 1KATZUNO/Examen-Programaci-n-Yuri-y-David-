@@ -8,13 +8,13 @@ import javax.swing.*;
 import javax.swing.border.BevelBorder;
 import Vista.Menu;
 
-public class Interfaz extends JFrame implements ActionListener {
+public class Interfaz1 extends JFrame implements ActionListener {
 
     JTextField usuarioField;
     JPasswordField claveField;
     JButton botonIngresar;
 
-    public Interfaz() {
+    public Interfaz1() {
         super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         comp();
     }
@@ -32,7 +32,7 @@ public class Interfaz extends JFrame implements ActionListener {
         Encabezado.setForeground(Color.WHITE);
         Encabezado.setFont(new Font("Roboto", Font.BOLD, 17));
         add(Encabezado);
-        
+
         JLabel usuarioLabel = new JLabel("Usuario:");
         usuarioLabel.setForeground(Color.WHITE);
         usuarioLabel.setFont(new Font("Roboto", Font.BOLD, 14));
@@ -52,22 +52,24 @@ public class Interfaz extends JFrame implements ActionListener {
         claveField = new JPasswordField();
         claveField.setBounds(375, 300, 200, 30);
         add(claveField);
-        
+
         botonIngresar = new JButton("Ingresar al menú");
         botonIngresar.setBounds(370, 385, 130, 30);
         botonIngresar.setFont(new Font("Roboto", Font.BOLD, 12));
         botonIngresar.setForeground(new java.awt.Color(102, 102, 102));
         botonIngresar.setBackground(Color.WHITE);
-        botonIngresar.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
+        botonIngresar.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102),
+                new java.awt.Color(102, 102, 102)));
         add(botonIngresar);
         botonIngresar.addActionListener(this);
-        
+
         JPanel fondo = new JPanel();
         fondo.setBackground(new java.awt.Color(42, 94, 166));
         fondo.setSize(900, 650);
         fondo.setLocation(0, 0);
         fondo.setVisible(true);
         add(fondo);
+
     }
 
     @Override
@@ -75,12 +77,23 @@ public class Interfaz extends JFrame implements ActionListener {
 
         if (e.getSource() == botonIngresar) {
 
-            Menu frame = new Menu();
-            frame.setBounds(0, 0, 900, 650);
-            frame.setVisible(true);
-            frame.setLocationRelativeTo(null);
-            frame.getContentPane().setBackground(Color.WHITE);
+            char[] password = claveField.getPassword();
+            // Convert char array to String (not recommended)
+            String contra = new String(password);
+            String usuario = usuarioField.getText();
+
+            if ("yuri".equals(usuario) && "1234".equals(contra)) {
+
+                Menu frame = new Menu();
+                frame.setBounds(0, 0, 900, 650);
+                frame.setVisible(true);
+                frame.setLocationRelativeTo(null);
+                frame.getContentPane().setBackground(Color.WHITE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
+            }
 
         }
+
     }
 }
