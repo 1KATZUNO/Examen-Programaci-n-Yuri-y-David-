@@ -40,13 +40,20 @@ public class Menu extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if (e.getSource() == botonMantenimiento) {
+
             MantenimientoPaciente mantenimiento = new MantenimientoPaciente();
             mantenimiento.setVisible(true);
+
         } else if (e.getSource() == botonDerechos) {
-            JOptionPane.showMessageDialog(this, "Desarrolladores: Juan Pérez, Ana García, etc.", "Derechos de Autor", JOptionPane.INFORMATION_MESSAGE);
+
+            JOptionPane.showMessageDialog(this, "Yuridia Mendoza Rodríguez", "Derechos de Autor", JOptionPane.INFORMATION_MESSAGE);
+        
         } else if (e.getSource() == botonSalir) {
+
             System.exit(0);
+            
         }
     }
 }
