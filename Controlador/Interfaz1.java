@@ -89,6 +89,7 @@ public class Interfaz1 extends JFrame implements ActionListener {
                 frame.setVisible(true);
                 frame.setLocationRelativeTo(null);
                 frame.getContentPane().setBackground(Color.WHITE);
+                
             } else {
                 JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
             }

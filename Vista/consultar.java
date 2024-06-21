@@ -7,10 +7,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import Modelo.Paciente;
 
 public class Consultar extends JFrame implements ActionListener {
 
@@ -19,6 +17,7 @@ public class Consultar extends JFrame implements ActionListener {
     private JTextField ConsultarField;
 
     public Consultar() {
+        
         // CONFIGURACIÓN DE BOTONES, LABELS, ETC
         BotonOkConsultar = new JButton("Consultar");
         BotonOkConsultar.setBounds(355, 220, 150, 40);
@@ -49,15 +48,7 @@ public class Consultar extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == BotonOkConsultar) {
-            String cedula = ConsultarField.getText();
-            Paciente paciente = Paciente.consultarPaciente(cedula);
-            if (paciente != null) {
-                String message = String.format("Nombre: %s\nCédula: %s\nEdad: %s\nContacto: %s\nResidencia: %s\nFecha: %s\nHora: %s",
-                        paciente.getNombre(), paciente.getCedula(), paciente.getEdad(), paciente.getContacto(), paciente.getResidencia());
-                JOptionPane.showMessageDialog(this, message);
-            } else {
-                JOptionPane.showMessageDialog(this, "No se encontró un registro con la identificación proporcionada.");
-            }
+            
         }
     }
 }
