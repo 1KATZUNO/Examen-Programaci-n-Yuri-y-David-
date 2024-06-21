@@ -12,14 +12,13 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Modelo.Paciente;
 
-public class consultar extends JFrame implements ActionListener {
+public class Consultar extends JFrame implements ActionListener {
 
     private static final long serialVersionUID = 1L;
     private JButton BotonOkConsultar;
     private JTextField ConsultarField;
 
-    public consultar() {
-
+    public Consultar() {
         // CONFIGURACIÓN DE BOTONES, LABELS, ETC
         BotonOkConsultar = new JButton("Consultar");
         BotonOkConsultar.setBounds(355, 220, 150, 40);

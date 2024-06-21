@@ -11,13 +11,7 @@ public class Menu extends JFrame implements ActionListener {
     private JButton botonMantenimiento, botonDerechos, botonSalir;
 
     public Menu() {
-       
-        setTitle("MENÚ");
-        setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(null);
-        setLocationRelativeTo(null);
-
+    
         JLabel Inicio = new JLabel("Presione la Acción que Desea Realizar");
         Inicio.setBounds(200, 100, 600, 50);
         Inicio.setForeground(Color.WHITE);

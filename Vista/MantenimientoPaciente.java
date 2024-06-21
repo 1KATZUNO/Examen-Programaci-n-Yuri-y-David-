@@ -1,167 +1,116 @@
 package Vista;
 
-import Modelo.Paciente;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 
 public class MantenimientoPaciente extends JFrame implements ActionListener {
 
-    private JTextField nombreField, cedulaField, edadField, contactoField, residenciaField, fechaField, horaField;
-    private JButton insertarButton, actualizarButton, eliminarButton, consultarButton;
+     JTextField nombreField, cedulaField, edadField, contactoField, residenciaField, fechaField, horaField;
+     JButton regresar, insertarButton, actualizarButton, eliminarButton, consultarButton;
 
     public MantenimientoPaciente() {
-        configurarVentana();
-        inicializarComponentes();
-    }
-
-    private void configurarVentana() {
+      
         setTitle("Mantenimiento de Pacientes");
-        setSize(800, 600);
+        setSize(900, 650);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLayout(null);
         setLocationRelativeTo(null);
-    }
 
-    private void inicializarComponentes() {
-        JLabel nombreLabel = new JLabel("Nombre:");
-        nombreLabel.setBounds(50, 50, 150, 30);
-        add(nombreLabel);
+        JLabel Inicio = new JLabel("Presione la Acción que Desea Realizar");
+        Inicio.setBounds(200, 50, 600, 50);
+        Inicio.setForeground(Color.WHITE);
+        Inicio.setFont(new Font("cooper black", Font.ROMAN_BASELINE, 26));
+        add(Inicio);
 
-        nombreField = new JTextField();
-        nombreField.setBounds(200, 50, 200, 30);
-        add(nombreField);
-
-        JLabel cedulaLabel = new JLabel("Cédula:");
-        cedulaLabel.setBounds(50, 100, 150, 30);
-        add(cedulaLabel);
-
-        cedulaField = new JTextField();
-        cedulaField.setBounds(200, 100, 200, 30);
-        add(cedulaField);
-
-        JLabel edadLabel = new JLabel("Edad:");
-        edadLabel.setBounds(50, 150, 150, 30);
-        add(edadLabel);
-
-        edadField = new JTextField();
-        edadField.setBounds(200, 150, 200, 30);
-        add(edadField);
-
-        JLabel contactoLabel = new JLabel("Contacto:");
-        contactoLabel.setBounds(50, 200, 150, 30);
-        add(contactoLabel);
-
-        contactoField = new JTextField();
-        contactoField.setBounds(200, 200, 200, 30);
-        add(contactoField);
-
-        JLabel residenciaLabel = new JLabel("Residencia:");
-        residenciaLabel.setBounds(50, 250, 150, 30);
-        add(residenciaLabel);
-
-        residenciaField = new JTextField();
-        residenciaField.setBounds(200, 250, 200, 30);
-        add(residenciaField);
-
-        JLabel fechaLabel = new JLabel("Fecha:");
-        fechaLabel.setBounds(50, 300, 150, 30);
-        add(fechaLabel);
-
-        fechaField = new JTextField();
-        fechaField.setBounds(200, 300, 200, 30);
-        add(fechaField);
-
-        JLabel horaLabel = new JLabel("Hora:");
-        horaLabel.setBounds(50, 350, 150, 30);
-        add(horaLabel);
-
-        horaField = new JTextField();
-        horaField.setBounds(200, 350, 200, 30);
-        add(horaField);
-
-        insertarButton = new JButton("Insertar");
-        insertarButton.setBounds(450, 50, 150, 40);
+        insertarButton = new JButton("INSERTAR");
+        insertarButton.setBounds(300, 160, 250, 50);
+        insertarButton.setFont(new Font("Roboto", Font.BOLD, 15));
+        insertarButton.setForeground(new java.awt.Color(102, 102, 102));
+        insertarButton.setBackground(Color.WHITE);
+        insertarButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(insertarButton);
         insertarButton.addActionListener(this);
 
-        actualizarButton = new JButton("Actualizar");
-        actualizarButton.setBounds(450, 150, 150, 40);
+        actualizarButton = new JButton("ACTUALIZAR");
+        actualizarButton.setBounds(300, 260, 250, 50);
+        actualizarButton.setFont(new Font("Roboto", Font.BOLD, 15));
+        actualizarButton.setForeground(new java.awt.Color(102, 102, 102));
+        actualizarButton.setBackground(Color.WHITE);
+        actualizarButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(actualizarButton);
         actualizarButton.addActionListener(this);
 
-        eliminarButton = new JButton("Eliminar");
-        eliminarButton.setBounds(450, 250, 150, 40);
+        eliminarButton = new JButton("ELIMINAR");
+        eliminarButton.setBounds(300, 360, 250, 50);
+        eliminarButton.setFont(new Font("Roboto", Font.BOLD, 15));
+        eliminarButton.setForeground(new java.awt.Color(102, 102, 102));
+        eliminarButton.setBackground(Color.WHITE);
+        eliminarButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(eliminarButton);
         eliminarButton.addActionListener(this);
 
-        consultarButton = new JButton("Consultar");
-        consultarButton.setBounds(450, 350, 150, 40);
+        consultarButton = new JButton("CONSULTAR");
+        consultarButton.setBounds(300, 460, 250, 50);
+        consultarButton.setFont(new Font("Roboto", Font.BOLD, 15));
+        consultarButton.setForeground(new java.awt.Color(102, 102, 102));
+        consultarButton.setBackground(Color.WHITE);
+        consultarButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED, new java.awt.Color(102, 102, 102), new java.awt.Color(102, 102, 102)));
         add(consultarButton);
         consultarButton.addActionListener(this);
+
+        JPanel fondo = new JPanel();
+        fondo.setBackground(new java.awt.Color(42, 94, 166));
+        fondo.setSize(900, 650);
+        fondo.setLocation(0, 0);
+        fondo.setVisible(true);
+        add(fondo);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == insertarButton) {
-            
-            String nombre = nombreField.getText();
-            String cedula = cedulaField.getText();
-            String edad = edadField.getText();
-            String contacto = contactoField.getText();
-            String residencia = residenciaField.getText();
-            String fecha = fechaField.getText();
-            String hora = horaField.getText();
 
-            Paciente paciente = new Paciente(nombre, cedula, edad, contacto, residencia, fecha, hora);
-            if (Paciente.insertarPaciente(paciente)) {
-                JOptionPane.showMessageDialog(this, "Paciente insertado exitosamente.");
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al insertar el paciente.");
-            }
+            Insertar frame = new Insertar();
+            frame.setBounds(0, 0, 900, 650);
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
+            frame.getContentPane().setBackground(Color.WHITE);
+           
         }
 
         if (e.getSource() == actualizarButton) {
-            String nombre = nombreField.getText();
-            String cedula = cedulaField.getText();
-            String edad = edadField.getText();
-            String contacto = contactoField.getText();
-            String residencia = residenciaField.getText();
-            String fecha = fechaField.getText();
-            String hora = horaField.getText();
 
-            Paciente paciente = new Paciente(nombre, cedula, edad, contacto, residencia, fecha, hora);
-            if (Paciente.actualizarPaciente(paciente)) {
-                JOptionPane.showMessageDialog(this, "Paciente actualizado exitosamente.");
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al actualizar el paciente.");
-            }
+            Actualizar frame = new Actualizar();
+            frame.setBounds(0, 0, 900, 650);
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
+            frame.getContentPane().setBackground(Color.WHITE);
+
         }
 
         if (e.getSource() == eliminarButton) {
-            String cedula = cedulaField.getText();
-            if (Paciente.eliminarPaciente(cedula)) {
-                JOptionPane.showMessageDialog(this, "Paciente eliminado exitosamente.");
-            } else {
-                JOptionPane.showMessageDialog(this, "Error al eliminar el paciente.");
-            }
+           
+            Eliminar frame = new Eliminar();
+            frame.setBounds(0, 0, 900, 650);
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
+            frame.getContentPane().setBackground(Color.WHITE);
+
         }
 
         if (e.getSource() == consultarButton) {
-            String cedula = cedulaField.getText();
-            Paciente paciente = Paciente.consultarPaciente(cedula);
-            if (paciente != null) {
-                nombreField.setText(paciente.getNombre());
-                edadField.setText(paciente.getEdad());
-                contactoField.setText(paciente.getContacto());
-                residenciaField.setText(paciente.getResidencia());
-                fechaField.setText(paciente.getFecha());
-                horaField.setText(paciente.getHora());
-                JOptionPane.showMessageDialog(this, "Paciente consultado exitosamente.");
-            } else {
-                JOptionPane.showMessageDialog(this, "No se encontró un paciente con la cédula proporcionada.");
-            }
+            
+            Consultar frame = new Consultar();
+            frame.setBounds(0, 0, 900, 650);
+            frame.setVisible(true);
+            frame.setLocationRelativeTo(null);
+            frame.getContentPane().setBackground(Color.WHITE);
+
         }
+
     }
 }

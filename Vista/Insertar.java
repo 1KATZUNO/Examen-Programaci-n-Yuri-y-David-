@@ -2,7 +2,6 @@ package Vista;
 
 import java.awt.Color;
 import java.awt.Font;
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -17,7 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import Modelo.Paciente;
 
-public class ingresar extends JFrame implements ActionListener {
+public class Insertar extends JFrame implements ActionListener {
 	
     private static final long serialVersionUID = 1L;
 	public JTextField NombreField, EdadField, ContactoField, ResidenciaField, FechaField, HoraField, CedulaField;
@@ -26,7 +25,13 @@ public class ingresar extends JFrame implements ActionListener {
 	public Icon icono;
 	public JButton BotonOkIngresar, Mostrar;
 
-	public ingresar () {
+	public Insertar () {
+
+		setTitle("Insertar Pacientes");
+        setSize(900, 650);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLayout(null);
+        setLocationRelativeTo(null);
 		
 //********************************************CONFI BOTONES, JLABELS Y JTEXTFIELDS******************************************************
 		BotonOkIngresar = new JButton("Ingresar");
@@ -228,31 +233,6 @@ public class ingresar extends JFrame implements ActionListener {
 		add(Pane);
 		
 //*******************************************FIN CONFI BOTONES, JLABELS Y JTEXTFIELDS****************************************************
-		
-	}
-	
-	public static void main(String[]Args) {
-		
-//*******************************************CONFI FONDO*********************************************************************************
-		ingresar frame = new ingresar();
-		frame.setBounds(0,0, 900, 650);
-		frame.setVisible(true);
-		frame.setLocationRelativeTo(null);
-		frame.setBackground(new Color (247, 210, 224));
-	}
-	
-	private void Paint (JLabel lbl, String direccion) {
-		this.imagenFondo = new ImageIcon (direccion);
-		this.icono = new ImageIcon (
-				this.imagenFondo.getImage().getScaledInstance(
-						lbl.getWidth(), 
-						lbl.getHeight(), 
-						Image.SCALE_DEFAULT)
-				);
-		lbl.setIcon(this.icono);
-		this.repaint();
-		
-//*******************************************FIN CONFI FONDO*****************************************************************************
 		
 	}
 	
