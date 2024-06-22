@@ -55,7 +55,7 @@ public class Insertar extends JFrame implements ActionListener {
 		JLabel CedulaLabel = new JLabel("2. Identificación: ");
 		JLabel EdadLabel = new JLabel("3. Edad: ");
 		JLabel ContactoLabel = new JLabel("4. Contacto: ");
-		JLabel ResidenciaLabel = new JLabel("5. Residencia: ");
+		JLabel Resi = new JLabel ("5. Residencia");
 		JLabel InicioIngresar = new JLabel("- - INGRESE LOS DATOS SOLICITADOS PARA REGISTRARSE - -");
 
 		InicioIngresar.setBounds(180, 1, 570, 109);
@@ -88,10 +88,10 @@ public class Insertar extends JFrame implements ActionListener {
 		ContactoLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		ContactoLabel.setForeground(Color.BLACK);
 
-		ResidenciaLabel.setBounds(515, 159, 200, 100);
-		add(ResidenciaLabel);
-		ResidenciaLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
-		ResidenciaLabel.setForeground(Color.BLACK);
+		Resi.setBounds(0, 0, 200, 100);
+		add(Resi);
+		Resi.setFont(new Font("Roboto", Font.PLAIN, 16));
+		Resi.setForeground(Color.BLACK);
 
 		NombreField.setBounds(45, 227, 230, 30);
 		add(NombreField);
@@ -193,7 +193,7 @@ public class Insertar extends JFrame implements ActionListener {
 		ResidenciaField.setBounds(515, 227, 230, 30);
 		add(ResidenciaField);
 
-		ResidenciaLabel.addKeyListener(new KeyAdapter() {
+		Resi.addKeyListener(new KeyAdapter() {
 
 			public void keyTyped(KeyEvent e) {
 

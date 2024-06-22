@@ -89,6 +89,7 @@ public class MantenimientoPaciente extends JFrame implements ActionListener {
             frame.setVisible(true);
             frame.setLocationRelativeTo(null);
             frame.getContentPane().setBackground(Color.WHITE);
+            dispose();
 
         }
 
