@@ -55,8 +55,8 @@ public class Insertar extends JFrame implements ActionListener {
 		JLabel CedulaLabel = new JLabel("2. Identificación: ");
 		JLabel EdadLabel = new JLabel("3. Edad: ");
 		JLabel ContactoLabel = new JLabel("4. Contacto: ");
-		JLabel Resi = new JLabel ("5. Residencia");
-		JLabel InicioIngresar = new JLabel("- - INGRESE LOS DATOS SOLICITADOS PARA REGISTRARSE - -");
+		JLabel ResidenciaLabel = new JLabel("5. Residencia: ");
+		JLabel InicioIngresar = new JLabel("- - INGRESE LOS DATOS SOLICITADOS PARA SOLICITAR CITA - -");
 
 		InicioIngresar.setBounds(180, 1, 570, 109);
 		add(InicioIngresar);
@@ -68,7 +68,7 @@ public class Insertar extends JFrame implements ActionListener {
 		DatosPaciente.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		DatosPaciente.setForeground(Color.BLACK);
 
-		NombreLabel.setBounds(45, 159, 150, 100);
+		NombreLabel.setBounds(45, 129, 150, 100);
 		add(NombreLabel);
 		NombreLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		NombreLabel.setForeground(Color.BLACK);
@@ -88,12 +88,12 @@ public class Insertar extends JFrame implements ActionListener {
 		ContactoLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		ContactoLabel.setForeground(Color.BLACK);
 
-		Resi.setBounds(0, 0, 200, 100);
-		add(Resi);
-		Resi.setFont(new Font("Roboto", Font.PLAIN, 16));
-		Resi.setForeground(Color.BLACK);
+		ResidenciaLabel.setBounds(515, 129, 200, 100);
+		add(ResidenciaLabel);
+		ResidenciaLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
+		ResidenciaLabel.setForeground(Color.BLACK);
 
-		NombreField.setBounds(45, 227, 230, 30);
+		NombreField.setBounds(45, 197, 230, 30);
 		add(NombreField);
 
 		NombreField.addKeyListener(new KeyAdapter() {
@@ -190,10 +190,10 @@ public class Insertar extends JFrame implements ActionListener {
 			}
 		});
 
-		ResidenciaField.setBounds(515, 227, 230, 30);
+		ResidenciaField.setBounds(515, 197, 230, 30);
 		add(ResidenciaField);
 
-		Resi.addKeyListener(new KeyAdapter() {
+		ResidenciaLabel.addKeyListener(new KeyAdapter() {
 
 			public void keyTyped(KeyEvent e) {
 

@@ -2,8 +2,7 @@ package Vista;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.sql.*;
@@ -19,7 +18,7 @@ public class Actualizar extends JFrame implements ActionListener{
     static final long serialVersionUID = 1L;
     JButton BotonOk;
     JTextField ConsultarField;
-    JTextField NombreField, EdadField, ContactoField, ResidenciaField, CedulaField;
+    JTextField NombreField, EdadField, ContactoField, ResidenciaField, CedulaField, resi;
 
     public Actualizar () {
 
@@ -51,9 +50,10 @@ public class Actualizar extends JFrame implements ActionListener{
 		JLabel NombreLabel = new JLabel("1. Nombre completo: ");
 		JLabel EdadLabel = new JLabel("3. Edad: ");
 		JLabel ContactoLabel = new JLabel("4. Contacto: ");
-		JLabel ResidenciaLabel = new JLabel("5. Residencia: ");
+		JLabel ResidenciaLabel = new JLabel("a ");
+		JLabel resi = new JLabel ("5. Residencia: ");
 
-		NombreLabel.setBounds(45, 159, 150, 100);
+		NombreLabel.setBounds(45, 179, 150, 100);
 		add(NombreLabel);
 		NombreLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		NombreLabel.setForeground(Color.BLACK);
@@ -63,17 +63,22 @@ public class Actualizar extends JFrame implements ActionListener{
 		EdadLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		EdadLabel.setForeground(Color.BLACK);
 
-		ContactoLabel.setBounds(45, 399, 100, 100);
+		ContactoLabel.setBounds(515, 259, 100, 100);
 		add(ContactoLabel);
 		ContactoLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		ContactoLabel.setForeground(Color.BLACK);
 
+		resi.setBounds(515, 179, 150, 100);
+		add(resi);
+		resi.setFont(new Font("Roboto", Font.PLAIN, 16));
+		resi.setForeground(Color.BLACK);
+
 		ResidenciaLabel.setBounds(515, 122, 200, 100);
 		add(ResidenciaLabel);
 		ResidenciaLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
-		ResidenciaLabel.setForeground(Color.BLACK);
+		ResidenciaLabel.setForeground(new Color(130, 167, 237));
 
-		NombreField.setBounds(45, 227, 230, 30);
+		NombreField.setBounds(45, 247, 230, 30);
 		add(NombreField);
 
 		NombreField.addKeyListener(new KeyAdapter() {
@@ -99,7 +104,7 @@ public class Actualizar extends JFrame implements ActionListener{
 		});
 
 
-		EdadField.setBounds(45, 387, 230, 30);
+		EdadField.setBounds(45, 325, 230, 30);
 		add(EdadField);
 
 		EdadField.addKeyListener(new KeyAdapter() {
@@ -123,7 +128,7 @@ public class Actualizar extends JFrame implements ActionListener{
 			}
 		});
 
-		ContactoField.setBounds(45, 467, 230, 30);
+		ContactoField.setBounds(515, 325, 230, 30);
 		add(ContactoField);
 
 		ContactoField.addKeyListener(new KeyAdapter() {
@@ -147,7 +152,7 @@ public class Actualizar extends JFrame implements ActionListener{
 			}
 		});
 
-		ResidenciaField.setBounds(515, 227, 230, 30);
+		ResidenciaField.setBounds(515, 247, 230, 30);
 		add(ResidenciaField);
 
 		ResidenciaLabel.addKeyListener(new KeyAdapter() {
