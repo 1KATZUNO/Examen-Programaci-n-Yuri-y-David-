@@ -68,7 +68,7 @@ public class Insertar extends JFrame implements ActionListener {
 		DatosPaciente.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		DatosPaciente.setForeground(Color.BLACK);
 
-		NombreLabel.setBounds(45, 119, 150, 100);
+		NombreLabel.setBounds(45, 159, 150, 100);
 		add(NombreLabel);
 		NombreLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		NombreLabel.setForeground(Color.BLACK);
@@ -78,22 +78,22 @@ public class Insertar extends JFrame implements ActionListener {
 		CedulaLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		CedulaLabel.setForeground(Color.BLACK);
 
-		EdadLabel.setBounds(45, 279, 100, 100);
+		EdadLabel.setBounds(515, 199, 100, 100);
 		add(EdadLabel);
 		EdadLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		EdadLabel.setForeground(Color.BLACK);
 
-		ContactoLabel.setBounds(45, 359, 100, 100);
+		ContactoLabel.setBounds(300, 309, 100, 100);
 		add(ContactoLabel);
 		ContactoLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		ContactoLabel.setForeground(Color.BLACK);
 
-		ResidenciaLabel.setBounds(515, 122, 200, 100);
+		ResidenciaLabel.setBounds(515, 159, 200, 100);
 		add(ResidenciaLabel);
 		ResidenciaLabel.setFont(new Font("Roboto", Font.PLAIN, 16));
 		ResidenciaLabel.setForeground(Color.BLACK);
 
-		NombreField.setBounds(45, 187, 230, 30);
+		NombreField.setBounds(45, 227, 230, 30);
 		add(NombreField);
 
 		NombreField.addKeyListener(new KeyAdapter() {
@@ -142,7 +142,7 @@ public class Insertar extends JFrame implements ActionListener {
 			}
 		});
 
-		EdadField.setBounds(45, 347, 230, 30);
+		EdadField.setBounds(515, 267, 230, 30);
 		add(EdadField);
 
 		EdadField.addKeyListener(new KeyAdapter() {
@@ -166,7 +166,7 @@ public class Insertar extends JFrame implements ActionListener {
 			}
 		});
 
-		ContactoField.setBounds(45, 427, 230, 30);
+		ContactoField.setBounds(300, 377, 230, 30);
 		add(ContactoField);
 
 		ContactoField.addKeyListener(new KeyAdapter() {
@@ -190,7 +190,7 @@ public class Insertar extends JFrame implements ActionListener {
 			}
 		});
 
-		ResidenciaField.setBounds(515, 187, 230, 30);
+		ResidenciaField.setBounds(515, 227, 230, 30);
 		add(ResidenciaField);
 
 		ResidenciaLabel.addKeyListener(new KeyAdapter() {
