@@ -48,10 +48,10 @@ public class Actualizar extends JFrame implements ActionListener{
 		ResidenciaField = new JTextField();
 
 		JLabel NombreLabel = new JLabel("1. Nombre completo: ");
-		JLabel EdadLabel = new JLabel("3. Edad: ");
+		JLabel EdadLabel = new JLabel("2. Edad: ");
 		JLabel ContactoLabel = new JLabel("4. Contacto: ");
 		JLabel ResidenciaLabel = new JLabel("a ");
-		JLabel resi = new JLabel ("5. Residencia: ");
+		JLabel resi = new JLabel ("3. Residencia: ");
 
 		NombreLabel.setBounds(45, 179, 150, 100);
 		add(NombreLabel);
@@ -222,7 +222,7 @@ public class Actualizar extends JFrame implements ActionListener{
             int exito = pstmt.executeUpdate();
 
             if (exito > 0) {
-                JOptionPane.showMessageDialog(null, "La persona se ha agregado exitosamente");
+                JOptionPane.showMessageDialog(null, "El registro se ha actualizado exitósamente");
             }
 
             // Limpiar los campos de texto

@@ -53,9 +53,9 @@ public class Insertar extends JFrame implements ActionListener {
 		JLabel DatosPaciente = new JLabel("' DATOS PERSONALES '");
 		JLabel NombreLabel = new JLabel("1. Nombre completo: ");
 		JLabel CedulaLabel = new JLabel("2. Identificación: ");
-		JLabel EdadLabel = new JLabel("3. Edad: ");
-		JLabel ContactoLabel = new JLabel("4. Contacto: ");
-		JLabel ResidenciaLabel = new JLabel("5. Residencia: ");
+		JLabel EdadLabel = new JLabel("4. Edad: ");
+		JLabel ContactoLabel = new JLabel("5. Contacto: ");
+		JLabel ResidenciaLabel = new JLabel("3. Residencia: ");
 		JLabel InicioIngresar = new JLabel("- - INGRESE LOS DATOS SOLICITADOS PARA SOLICITAR CITA - -");
 
 		InicioIngresar.setBounds(180, 1, 570, 109);
